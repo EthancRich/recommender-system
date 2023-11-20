@@ -1,4 +1,4 @@
-function [movies_sorted, map] = reccomend_movies(chosen_movie_id, min_ratings, k)
+function [movies_sorted, map] = reccomend_movies(chosen_movie_id, min_ratings, k, num_recommendations)
     % TAKES: 
     % - chosen_movie_id, movie id off of which to reccomend similar movies
     % - min_ratings, the minimum number of ratings for a movie to be considered
@@ -56,6 +56,6 @@ function [movies_sorted, map] = reccomend_movies(chosen_movie_id, min_ratings, k
     % find movies that are most similar to chosen movie
     movies_sorted = get_nearby_movies(map==chosen_movie_id, Vt); % (pass location of id in Ratings using map)
     
-    
+    movies_sorted = movies_sorted(2:k+1, :)
 end
 

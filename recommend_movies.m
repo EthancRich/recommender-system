@@ -3,6 +3,8 @@ function [recommended_movies_sorted, map] = recommend_movies(chosen_movie_id, mi
     % - chosen_movie_id, movie id off of which to reccomend similar movies
     % - min_ratings, the minimum number of ratings for a movie to be considered
     % - k, truncation value for TSVD
+    % - num_recommendations, the total number of recommended movies to
+    % provide
     % RETURNS:
     % - recommended_movies_sorted, list of movies sorted based off of similarity
     % - map, map of movie indicies to IDs

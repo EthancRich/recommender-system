@@ -44,7 +44,7 @@ function [recommended_movies_sorted, map] = recommend_movies(chosen_movie_id, mi
 
     % set zero elements to non-zero column average
     for i = 1:num_movies
-        zero_idx = (Ratings(:, i) == 0); % find indices of non-zero values
+        zero_idx = (Ratings(:, i) == 0); % find indices of zero values
         nonzero_avg = mean(nonzeros(Ratings(:, i))); % find avg of non-zero values
         Ratings(zero_idx, i) = nonzero_avg; % set zero values to avg
     end

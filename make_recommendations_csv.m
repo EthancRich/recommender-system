@@ -3,10 +3,10 @@ clear;
 
 num_recommendations = 3;
 
-% following three array choices just examples
-chosen_movie_ids = [6, 594, 89745];% heat, snow white, and avengers
-k_values = [1, 3, 5, 10, 20g];
-min_rating_values = [3, 5, 10];
+% following three array choices for presentation
+chosen_movie_ids = [89745, 594, 1213, 111113, 8533];% avengers, snow white, goodfellas, neighbors, the notebook
+k_values = [3, 10, 20, 50, 100];
+min_rating_values = [1, 3, 5, 10];
 
 
 num_min_rating_values = numel(min_rating_values);

@@ -49,7 +49,7 @@ function [recommended_movies_sorted, map] = recommend_movies(chosen_movie_id, mi
         Ratings(zero_idx, i) = nonzero_avg; % set zero values to avg
     end
     
-    [U, ~, Vt] = tsvd(Ratings,k);  % truncated svd (could use normal svd here, but will need to truncate when dataset gets larger)
+    [~, ~, Vt] = tsvd(Ratings,k);  % truncated svd (could use normal svd here, but will need to truncate when dataset gets larger)
     
     % Create User heuristic plot and Movie heuristic plot
     %plot_user_movie_heuristics(k, U, Vt) 
@@ -60,4 +60,6 @@ function [recommended_movies_sorted, map] = recommend_movies(chosen_movie_id, mi
     
     recommended_movies_sorted = recommended_movies_sorted(2:num_recommendations+1, :);
 end
+
+
 

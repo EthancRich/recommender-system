@@ -5,6 +5,7 @@ num_recommendations = 3;
 
 % following three array choices for presentation
 chosen_movie_ids = [89745, 594, 1213, 111113, 8533];% avengers, snow white, goodfellas, neighbors, the notebook
+
 k_values = [3, 10, 20, 50, 100];
 min_rating_values = [1, 3, 5, 10];
 
@@ -13,7 +14,7 @@ num_min_rating_values = numel(min_rating_values);
 num_k_values = numel(k_values); 
 
 
-num_rows = num_recommendations*num_k_values*num_min_rating_values;
+num_rows = numel(chosen_movie_ids)*num_k_values*num_min_rating_values;
 
 % for storing in table
 all_recommended_movies = strings(num_rows, num_recommendations);
